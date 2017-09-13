@@ -22,11 +22,11 @@ This repository contains **Dockerfile** of [Devpi](http://doc.devpi.net/) for [D
 
 #### Run `devpi-server`
 
-    docker run -d --name devpi -p 3141:3141 --mount source=/data/xxx,target=/mnt  saxix/devpi
+    docker run -d --name devpi -p 3141:3141 -v /data/devpi_index:/mnt saxix/devpi
 
 #### Create reusable container
 
-    docker create --name devpi -p 3141:3141 -v /data/devpi_index:/mnt  saxix/devpi
+    docker create --name devpi -p 3141:3141 -v /data/devpi_index:/mnt saxix/devpi
 
     docker start devpi
 
