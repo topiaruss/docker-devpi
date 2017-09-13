@@ -24,5 +24,12 @@ This repository contains **Dockerfile** of [Devpi](http://doc.devpi.net/) for [D
 
     docker run -d --name devpi -p 3141:3141 --mount source=/data/xxx,target=/mnt  saxix/devpi
 
+#### Create reusable container
+
+    docker create --name devpi -p 3141:3141 -v /data/devpi_index:/mnt  saxix/devpi
+
+    docker start devpi
+
+
 Devpi creates a user named `root` by default, its password can be set with
 `DEVPI_PASSWORD` environment variable.
