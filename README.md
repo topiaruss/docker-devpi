@@ -13,16 +13,16 @@ This repository contains **Dockerfile** of [Devpi](http://doc.devpi.net/) for [D
 
 1. Install [Docker](https://www.docker.io/).
 
-2. Download [trusted build](https://index.docker.io/u/scrapinghub/devpi/) from public [Docker Registry](https://index.docker.io/): `docker pull scrapinghub/devpi`
+2. Download [trusted build](https://index.docker.io/u/saxix/devpi/) from public [Docker Registry](https://index.docker.io/): `docker pull saxix/devpi`
 
-   (alternatively, you can build an image from Dockerfile: `docker build -t="scrapinghub/devpi" github.com/scrapinghub/docker-devpi`)
+   (alternatively, you can build an image from Dockerfile: `docker build -t="saxix/devpi" github.com/saxix/docker-devpi`)
 
 
 ### Usage
 
 #### Run `devpi-server`
 
-    docker run -d --name devpi -p 3141:3141 saxix/devpi
+    docker run -d --name devpi -p 3141:3141 --mount source=/data/xxx,target=/mnt  saxix/devpi
 
 Devpi creates a user named `root` by default, its password can be set with
 `DEVPI_PASSWORD` environment variable.

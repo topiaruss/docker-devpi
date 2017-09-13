@@ -19,4 +19,4 @@ RUN pip install \
 VOLUME /mnt
 EXPOSE 3141
 ADD entrypoint.sh /
-CMD ['/entrypoint.sh']
+CMD ["/entrypoint.sh"]

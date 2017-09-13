@@ -18,6 +18,9 @@ kill_tail() {
 }
 trap kill_tail INT
 trap kill_tail TERM
+if [[ $initialize = yes ]]; then
+    devpi-server --init
+fi
 
 devpi-server --start --host 0.0.0.0 --port 3141 || \
     { [ -f "$LOG_FILE" ] && cat "$LOG_FILE"; exit 1; }
