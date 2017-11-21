@@ -7,7 +7,9 @@ RUN apt-get remove -y \
   imagemagick \
   binutils \
   && apt-get update \
-  && apt-get -y autoremove
+  && apt-get -y upgrade \
+  && apt-get -y autoremove \
+  && apt-get -y clean
 
 
 RUN pip install \
