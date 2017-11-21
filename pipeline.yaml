@@ -1,0 +1,22 @@
+jobs:
+- name: docker-devpi-publish
+  public: true
+  serial: true
+  plan:
+  - get: docker-devpi
+    trigger: true
+  - put: docker-devpi-image
+    params: {build: docker-devpi}
+
+resources:
+- name: docker-devpi
+  type: git
+  source:
+    uri: https://github.com/topiaruss/docker-devpi.git
+
+- name: docker-devpi-image
+  type: docker-image
+  source:
+    username: {{docker-username}}
+    password: {{docker-password}}
+    repository: topiaruss/docker-devpi
