@@ -5,7 +5,6 @@ LABEL description='[Devpi](http://doc.devpi.net/) server.'
 
 RUN apt-get remove -y \
   imagemagick \
-  binutils \
   && apt-get update \
   && apt-get -y upgrade \
   && apt-get -y autoremove \
