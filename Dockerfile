@@ -3,6 +3,11 @@ FROM python:3
 LABEL version='4.3.1'
 LABEL description='[Devpi](http://doc.devpi.net/) server.'
 
+RUN apt-get remove -y \
+  imagemagick \
+  binutils \
+  && apt-get update \
+  && apt-get -y autoremove
 
 
 RUN pip install \
