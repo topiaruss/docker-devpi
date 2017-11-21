@@ -5,9 +5,9 @@ jobs:
   plan:
   - get: docker-devpi
     trigger: true
-#  - put: docker-devpi-image-at-dockerhub
-#    params: {build: docker-devpi}
   - put: docker-devpi-image-at-quay
+    params: {build: docker-devpi}
+  - put: docker-devpi-image-at-dockerhub
     params: {build: docker-devpi}
 
 resources:
@@ -16,13 +16,13 @@ resources:
   source:
     uri: https://github.com/topiaruss/docker-devpi.git
 
-#- name: docker-devpi-image-at-dockerhub
-#  type: docker-image
-#  source:
-#    username: {{docker-username}}
-#    password: {{docker-password}}
-#    repository: topiaruss/docker-devpi
-#
+- name: docker-devpi-image-at-dockerhub
+  type: docker-image
+  source:
+    username: {{docker-username}}
+    password: {{docker-password}}
+    repository: topiaruss/docker-devpi
+
 - name: docker-devpi-image-at-quay
   type: docker-image
   source:
