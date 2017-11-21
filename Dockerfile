@@ -1,15 +1,15 @@
-FROM python:3
+FROM python:3.7-rc
 
 LABEL version='4.3.1'
 LABEL description='[Devpi](http://doc.devpi.net/) server.'
 
-RUN apt-get remove -y \
-  imagemagick \
-  binutils \
-  && apt-get update \
-  && apt-get -y upgrade \
-  && apt-get -y autoremove \
-  && apt-get -y clean
+#RUN apt-get remove -y \
+#  imagemagick \
+#  binutils \
+#  && apt-get update \
+#  && apt-get -y upgrade \
+#  && apt-get -y autoremove \
+#  && apt-get -y clean
 
 
 RUN pip install \
