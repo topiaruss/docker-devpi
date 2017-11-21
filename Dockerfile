@@ -1,6 +1,6 @@
 FROM python:3
 
-LABEL version='4.3.0'
+LABEL version='4.3.1'
 LABEL description='[Devpi](http://doc.devpi.net/) server.'
 
 
@@ -10,10 +10,10 @@ RUN pip install \
     devpi-client==3.0 \
     devpi-web==3.2 \
     devpi-cleaner==0.2.0 \
-    devpi-slack==0.1.2 \
+    devpi-slack==0.1.3 \
     devpi-tools==0.4 \
     devpi-semantic-ui==0.2.2 \
-    devpi-builder==3.0.0 \
+    devpi-builder==3.0.1 \
     devpi-passwd-reset==1.0.0
 
 VOLUME /mnt
