@@ -3,8 +3,7 @@
 
 This repository contains a **Dockerised** implementation of [Devpi](http://doc.devpi.net/) for [Docker](https://www.docker.io/)'s [trusted build](https://index.docker.io/u/scrapinghub/devpi/) published to the public [Docker Registry](https://index.docker.io/).
 
-Thanks to [Stefano Apostolico](https://github.com/saxix) for the original. This fork updates the base platform to reduce the scary number of security issues, and adds a Concourse build pipeline, since that's the way my project is going for components and products.
-
+Thanks to [Stefano Apostolico](https://github.com/saxix) for the original. This fork updates the base platform to reduce the scary number of security issues, and adds a Concourse build pipeline, since that's the way my project is going for components and products.  I appreciate Stefano's attention to OS signal traps in the main entrypoint script. 
 
 ### Dependencies
 
@@ -37,5 +36,5 @@ This image is specifically designed for deployment from Quay.io to K8s via my He
     docker start devpi
 
 
-Devpi creates a user named `root` by default, its password can be set with the
+Devpi creates a user named `root` by default. Its password can be set with the
 `DEVPI_PASSWORD` environment variable.
