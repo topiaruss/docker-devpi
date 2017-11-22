@@ -12,7 +12,7 @@ Thanks to [Stefano Apostolico](https://github.com/saxix) for the original. This 
 
 ### Installation
 
-This image is specifically designed for deployment from Quay.io to K8s via my Helm chart, and will be maintained with that purpose in mind, but it can also be used directly.
+This image is specifically designed for deployment from Quay.io to K8s via my [Helm Chart](https://github.com/topiaruss/helm-devpi), and will be maintained with that purpose in mind, but it can also be used directly.
 
 1. Install [Docker](https://www.docker.io/).
 
